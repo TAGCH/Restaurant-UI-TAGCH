@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="="IE=edge>
+    <meta name="viewport" content="width=device-width, initial-scal=1.0">
+    <title>Restaurant Ranking</title>
+
+    <style>
+      table {
+        font-family: optima, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,tr,th {
+        border:  1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      .item {
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .item:hover {
+        transform: scale(1.07);
+      }
+    </style>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/pricing/">
+
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="pricing.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-5 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+          <a class="navbar-brand" href="/" style="font-weight: 700;">Restaurant Ranking</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="Category.ejs">Category</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Sales.ejs">Sales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Franchise.ejs">Franchise</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li> -->
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="Search.ejs" method="POST">
+              <lable>
+                <span></span>
+                  <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search Restaurant Name" >
+                </span>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+              </lable>
+            </form>
+          </div>
+        </nav>
+      </div>
+
+   <main role="main">
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4" style="left:80px; top:85px;">
+            <center>
+              <div class="item">
+                <a href="https://www.starbucks.co.th/" target="_blank" rel="noopener">
+                  <img class="rounded-circle" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/640px-Starbucks_Corporation_Logo_2011.svg.png" alt="Netflix" width="140" height="140">
+                </a>
+              </div>
+                <h2>Starbucks</h2>
+              <p style="font-family:courier;">Rank 2</p>
+              <p><a class="btn btn-secondary" target="_blank" rel="noopener" href="https://www.starbucks.co.th/" role="button">View details &raquo;</a></p>
+          </center>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <center>
+              <div class="item">
+                <a href="https://www.mcdonalds.co.th/" target="_blank" rel="noopener">
+                  <img class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT28IYhctTI6eQ7BxgKmxV9VDkKadfnsMYeTw&usqp=CAU" alt="Generic placeholder image" width="200" height="200">
+                </a>
+              </div>
+              <h2>McDonald's</h2>
+              <p style="font-family:courier;"">Rank 1</p>
+              <p><a class="btn btn-secondary" target="_blank" rel="noopener" href="https://www.mcdonalds.co.th/" role="button">View details &raquo;</a></p>
+          </center>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4" style="right:80px; top:85px;">
+          <center>
+            <div class="item">
+              <a href="https://www.chick-fil-a.com/" target="_blank" rel="noopener">
+                <img class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd3m1QBCqZyJO6fucM3GsuCnwPKELzcuB7zC2L5lsHhIrQ9kH4WbibDioymhOVIz8IK_o&usqp=CAU" alt="Generic placeholder image" width="140" height="140">
+              </a>
+            </div>
+            <h2>Chick-fil-A</h2>
+            <p style="font-family:courier;">Rank 3</p>
+            <p><a class="btn btn-secondary" target="_blank" rel="noopener" href="https://www.chick-fil-a.com/" role="button">View details &raquo;</a></p>
+          </center>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <br>
+
+
+        <!-- START THE FEATURETTES -->
+        <hr class="featurette-divider"><br>
+          <h1 class="featurette-heading"><center>RECOMMENT</center></h1>
+        
+
+        <hr class="featurette-divider">   
+
+        <div class="row featurette">
+            <div class="col-md-8">
+              <h2 class="featurette-heading">Burger King</h2>
+              <h4><span class="text-muted">#Rank 5</span></h4>
+              <p class="lead">Burger King (BK) is an American-based multinational chain of hamburger fast food restaurants. Headquartered in Miami-Dade County, Florida, the company was founded in 1953 as Insta-Burger King, a Jacksonville, Florida–based restaurant chain.</p>
+            </div>
+            <div class="col-md-4" style="left:80px;">
+              <div class="item">
+                <a href="https://www.burgerking.co.th/" target="_blank" rel="noopener">
+                  <img class="featurette-image img-fluid mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/800px-Burger_King_2020.svg.png" alt="Netflix" width="250" height="250">
+                </a>
+              </div>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-4">
+            <div class="item">
+              <a href="https://www.kfc.co.th/?utm_source=google_sem&utm_medium=ads_pfm&utm_campaign=230323_brandoff_delivery_oc&utm_content=cpa_sem_ad_text_adtext_&gclid=CjwKCAjw586hBhBrEiwAQYEnHfWRrKb8BnEM1xU3OEZXYVS7GHkH5bIBSFrBizu97pyryQjVTwYMUxoCFokQAvD_BwE&gclsrc=aw.ds" target="_blank" rel="noopener">
+                <img class="featurette-image img-fluid mx-auto" src="https://www.terminal21.co.th/korat/wp-content/uploads/2016/11/KFC.png" alt="Generic placeholder image" width="250" height="250">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-8 order-md-1">
+            <h2 class="featurette-heading">KFC</h2>
+            <h4><span class="text-muted">#Rank 14</span></h4>
+            <p class="lead">KFC (Kentucky Fried Chicken) is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken. It is the world's second-largest restaurant chain (as measured by sales) after McDonald's, with 22,621 locations globally in 150 countries as of December 2019.</p>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-8" >
+            <h2 class="featurette-heading">Dairy Queen</h2>
+            <h4><span class="text-muted">#Rank 21</span></h4>
+            <p class="lead">Dairy Queen is an American chain of soft serve ice cream and fast food restaurants headquartered in Bloomington, Minnesota, United States. It was owned and operated by Sherb Noble and opened on June 22, 1940.</p>
+          </div>
+          <div class="col-md-4" style="left:80px;">
+            <div class="item">
+              <a href="https://www.1112delivery.com/restaurant/dairy-queen?cid=" target="_blank" rel="noopener">
+                <img class="featurette-image img-fluid mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Dairy_Queen_logo.svg/1200px-Dairy_Queen_logo.svg.png" alt="Generic placeholder image" width="250" height="250">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="featurette-divider"><br>
+        <center>
+          <h1>RESTAURANT TOP 50 RANKING TABLE</h1><br>
+        </center>
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Restaurant Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for (let i = 0; i < result.length; i++) { %>
+              <tr>
+                <td><%= result[i].Rank %></td>
+                <td><%= result[i].RestaurantName %></td>
+              </tr>
+            <% } %>
+          </tbody>
+        </table>
+
+        <!-- /END THE FEATURETTES -->
+        <hr class="featurette-divider">
+      </div><!-- /.container -->
+
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="/">Back to top</a></p>
+        <p>&copy; 2023 SKE &middot; <a href="Reference.ejs">Reference</a> </p>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+</body>
+</html>

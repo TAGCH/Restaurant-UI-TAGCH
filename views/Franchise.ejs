@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="="IE=edge>
+    <meta name="viewport" content="width=device-width, initial-scal=1.0">
+    <title>Restaurant Ranking</title>
+
+    <style>
+      table {
+        font-family: optima, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,tr,th {
+        border:  1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="/" style="font-weight: 700;">Restaurant Ranking</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="Category.ejs">Category</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Sales.ejs">Sales</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="Franchise.ejs">Franchise</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+          </ul>
+          <form class="form-inline my-2 my-lg-0" action="Search.ejs" method="POST">
+            <lable>
+              <span></span>
+                <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search Restaurant Name" >
+              </span>
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+            </lable>
+          </form>
+        </div>
+      </nav>
+  
+      <br><br><br><br>
+  
+      <main role="main" class="container">
+
+        <div class="starter-template">
+          <h2>Restaurant Top 50 Franchise Table</h2>
+          <label for="category" style="font-family: Arial, Helvetica, sans-serif;">Order by:</label>
+          <select name="category" id="category" onchange="location = this.value;">
+              <option value="Franchise.ejs"></option>
+              <option value="U_Fran.ejs">Units</option>
+              <option value="Y_Fran.ejs">YOY_Units</option>
+          </select>
+          <br><br>
+        </div>
+  
+      </main><!-- /.container -->
+  
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+      <script src="../../assets/js/vendor/popper.min.js"></script>
+      <script src="../../dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
